@@ -1,0 +1,10 @@
+/* Smooth transitions */
+input.form-control {
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Validation icons */
+.status-icon {
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}

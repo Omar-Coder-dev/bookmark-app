@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookmarker</title>
+  <link rel="stylesheet" href="./Styling/bootstrap.min.css" />
+  <link rel="stylesheet" href="./Styling/master.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body data-bs-theme="dark" class="bg-info-subtle">
+
+  <h1 class="text-center mt-4 text-info display-4 fw-bold">Bookmark</h1>
+  <p class="text-center mt-2 text-white fs-4 fw-medium">Bookmark your favorite sites</p>
+
+  <div class="container w-75 mx-auto mt-4 bg-info-subtle bg-gradient border border-info-subtle rounded-4 p-4 shadow">
+    
+    <div class="form-floating mb-3 position-relative">
+      <input type="text" class="form-control rounded-pill pe-5" id="siteName" placeholder="" oninput="validateSiteName()" />
+      <label for="siteName">
+        <i class="fa-solid fa-book-bookmark me-2 text-info"></i>Site Name
+      </label>
+      <i class="status-icon position-absolute top-50 end-0 translate-middle-y me-3 fs-5"></i>
+    </div>
+
+    <div class="form-floating mb-3 position-relative">
+      <input type="text" class="form-control rounded-pill pe-5" id="siteURL" placeholder="" oninput="validateSiteURL()" />
+      <label for="siteURL">
+        <i class="fa-solid fa-link me-2 text-info"></i>Site URL
+      </label>
+      <i class="status-icon position-absolute top-50 end-0 translate-middle-y me-3 fs-5"></i>
+    </div>
+
+    <button type="submit" onclick="addSite();" class="btn btn-outline-info px-5 py-2 rounded-pill">
+      Submit
+    </button>
+  </div>
+
+  <div class="container w-75 mx-auto" id="alertBox"></div>
+
+  <table class="table table-hover w-75 mx-auto mt-5 text-center align-middle">
+    <thead>
+      <tr class="table-info">
+        <th>#</th>
+        <th>Website Name</th>
+        <th>Visit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody id="tBody"></tbody>
+  </table>
+
+  <script src="./JS/bootstrap.bundle.min.js"></script>
+  <script src="./JS/script.js"></script>
+</body>
+</html>
